@@ -1,58 +1,57 @@
-.flower-bouquet {
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
+/* Estilos para el ramo de flores */
+.ramo-de-flores {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.flower {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  margin: 20px; /* Agregar margen entre las flores */
+/* Estilos para las flores */
+.flor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
 }
 
-.flower:hover {
-  transform: rotateY(30deg) scale(1.1);
+/* Efectos de hover para las flores */
+.flor:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.petals {
-  background-color: #ffff00;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Efectos de transición para las flores */
+.flor {
+    transition: transform 0.5s ease-in-out;
 }
 
-.center {
-  background-color: #333;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Estilos para cada flor individual */
+.flor:nth-child(1) {
+    top: 0px;
+    left: 0px;
 }
 
-/* Agregar estilos para cada flor */
-.flower:nth-child(1) {
-  transform: translateX(-50px);
+.flor:nth-child(2) {
+    top: 50px;
+    left: 50px;
 }
 
-.flower:nth-child(2) {
-  transform: translateX(50px);
+.flor:nth-child(3) {
+    top: 100px;
+    left: 100px;
 }
 
-.flower:nth-child(3) {
-  transform: translateY(-50px);
+.flor:nth-child(4) {
+    top: 150px;
+    left: 150px;
 }
 
-.flower:nth-child(4) {
-  transform: translateY(50px);
-}
-
-.flower:nth-child(5) {
-  transform: translateX(-25px) translateY(25px);
+.flor:nth-child(5) {
+    top: 200px;
+    left: 200px;
 }
