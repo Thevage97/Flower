@@ -1,24 +1,25 @@
 import turtle
-import colorsys as cs
+import colorsys
 
-def draw_pattern():
-    turtle.setup(800, 2003)
-    turtle.speed(0)
-    turtle.width(2)
+def draw_turtle_art():
+    turtle.tracer(100)
+    h = 0.85
+    turtle.speed(25)
     turtle.bgcolor("black")
     
-    for i in range(25):
-        for j in range(15):
-            turtle.color(cs.hsv_to_rgb(i/15, 5/25, 1))
-            turtle.right(90)
-            turtle.circle(200-j*4, 90)
-            turtle.left(90)
-            turtle.circle(200-j*4, 90)
-            turtle.right(180)
-            turtle.circle(50, 24)
+    for i in range(190):
+        c = colorsys.hsv_to_rgb(h,1,1)
+        turtle.fillcolor(c)
+        h += 0.0015
+        turtle.begin_fill()
+        turtle.circle(190-i, 90)
+        turtle.lt(75)
+        turtle.lt(20)
+        turtle.circle(190-i, 90)
+        turtle.lt(18)
+        turtle.end_fill()
     
-    turtle.hideturtle()
     turtle.done()
 
-# Call the function to draw the pattern
-draw_pattern()
+# Call the function to draw the turtle art
+draw_turtle_art()
