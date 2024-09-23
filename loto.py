@@ -1,5 +1,5 @@
 import turtle
-import colorsys
+import colorsys as cs
 
 def draw_turtle_art():
     turtle.tracer(100)
