@@ -21,5 +21,5 @@ def draw_turtle_art():
     
     turtle.done()
 
-# Call the function to draw the turtle art
-draw_turtle_art()
+if __name__ == "__main__":
+    draw_turtle_art()
